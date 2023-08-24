@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardAdmin;
+use App\Http\Controllers\SupplierAdmin;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', [DashboardAdmin::class, 'index']);
+Route::get('/supplier', [SupplierAdmin::class, 'index']);
+Route::get('/supplier/create', [SupplierAdmin::class, 'create']);
+Route::post('/supplier', [SupplierAdmin::class, 'store']);
+Route::get('/supplier/{id}/edit', [SupplierAdmin::class, 'edit']);
+Route::put('/supplier/{id}', [SupplierAdmin::class, 'update']);
+Route::get('/supplier/{id}', [SupplierAdmin::class, 'destroy']);
