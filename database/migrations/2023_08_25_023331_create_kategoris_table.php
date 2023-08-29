@@ -13,11 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('suppliers', function (Blueprint $table) {
-            $table->string('kd_supplier', 10)->primary();
-            $table->string('nama_supplier', 50);
-            $table->string('alamat_supplier', 100);
-            $table->string('no_telp_supplier');
+        Schema::create('kategoris', function (Blueprint $table) {
+            $table->string('kd_kategori', 10)->primary();
+            $table->string('nama_kategori', 50);
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('suppliers');
+        Schema::dropIfExists('kategoris');
     }
 };

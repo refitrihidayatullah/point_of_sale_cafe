@@ -28,9 +28,8 @@
                 </a>
                 
                 <ul class="dropdown-menu" aria-labelledby="masterData">
-                  <li><a class="dropdown-item" href="{{url('/supplier')}}">Data Supplier</a></li>
-                  <li><a class="dropdown-item" href="#">Data Kategori</a></li>
-                  <li><a class="dropdown-item" href="#">Menu Makanan</a></li>
+                  <li><a class="dropdown-item" href="{{url('/kategori')}}">Data Kategori</a></li>
+                  <li><a class="dropdown-item" href="{{url('/menu')}}">Menu Makanan</a></li>
                 </ul>
             </li>
 
